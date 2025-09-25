@@ -199,6 +199,7 @@ body {
     display: flex;
     gap: 1rem;
     margin-bottom: 3rem;
+    justify-content: center;
 }
 
 .btn {
@@ -235,6 +236,7 @@ body {
 .hero-social {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .social-link {
