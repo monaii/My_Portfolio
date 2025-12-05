@@ -164,8 +164,15 @@ body {
 .hero-subtitle {
     font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     color: #e5e7eb;
+}
+
+h4.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #d1d5db;
+    margin-bottom: 1.5rem;
 }
 
 .hero-location-small {
@@ -605,6 +612,169 @@ section {
     line-height: 1.6;
 }
 
+/* Certifications Section */
+.certifications {
+    background-color: #f9fafb;
+}
+
+.certifications-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.certification-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.certification-item:hover {
+    transform: translateY(-5px);
+}
+
+.certification-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #2563eb, #7c3aed);
+}
+
+.certification-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb;
+    font-size: 1.5rem;
+}
+
+.certification-details {
+    flex: 1;
+}
+
+.certification-details h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}
+
+.certification-issuer {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.certification-date {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.certification-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cert-tag {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #dbeafe;
+}
+
+.certification-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.certification-link:hover {
+    color: #1d4ed8;
+}
+
+/* CV Section */
+.cv {
+    background-color: #ffffff;
+}
+
+.cv-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cv-description {
+    font-size: 1.2rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.cv-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.cv-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 24px;
+    font-size: 1rem;
+}
+
+.cv-btn i {
+    font-size: 1.1rem;
+}
+
+.cv-viewer {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.cv-iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+    display: block;
+}
+
 /* Contact Section */
 .contact {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -736,9 +906,13 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .education-item {
+    .education-item, .certification-item {
         flex-direction: column;
         text-align: center;
+    }
+
+    .certification-issuer, .certification-date, .certification-skills, .certification-link {
+        justify-content: center;
     }
     
     .skills-grid {
@@ -841,56 +1015,4 @@ section {
 
 .hero-social {
     animation-delay: 1.2s;
-}
-
-/* CV Section */
-.cv {
-    background-color: #f9fafb;
-}
-
-.cv-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.cv-description {
-    font-size: 1.2rem;
-    color: #4b5563;
-    margin-bottom: 2rem;
-}
-
-.cv-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-}
-
-.cv-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 12px 24px;
-    font-size: 1rem;
-}
-
-.cv-btn i {
-    font-size: 1.1rem;
-}
-
-.cv-viewer {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin-top: 2rem;
-}
-
-.cv-iframe {
-    width: 100%;
-    height: 800px;
-    border: none;
-    display: block;
 }
