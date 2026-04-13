@@ -550,6 +550,7 @@ section {
     font-style: italic;
 }
 
+/* Experience Section */
 .experience-content {
     max-width: 900px;
     margin: 0 auto;
@@ -661,6 +662,7 @@ section {
     gap: 0.5rem;
 }
 
+/* Papers Section */
 .papers {
     background-color: #f9fafb;
 }
