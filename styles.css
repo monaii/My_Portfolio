@@ -550,6 +550,197 @@ section {
     font-style: italic;
 }
 
+.experience-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.experience-item {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #2563eb, #7c3aed);
+}
+
+.experience-item.current::before {
+    background: linear-gradient(to bottom, #059669, #10b981);
+}
+
+.experience-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb;
+    font-size: 1.5rem;
+}
+
+.experience-item.current .experience-icon {
+    background: rgba(5, 150, 105, 0.12);
+    color: #059669;
+}
+
+.experience-details {
+    flex: 1;
+}
+
+.experience-details h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.experience-company {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.experience-company-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.experience-company-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.experience-type {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.experience-date,
+.experience-location {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.experience-description {
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 1rem 0 1.25rem 0;
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.papers {
+    background-color: #f9fafb;
+}
+
+.papers-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.paper-item {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.paper-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb;
+    font-size: 1.5rem;
+}
+
+.paper-details {
+    flex: 1;
+}
+
+.paper-details h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.paper-meta {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.paper-description {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.paper-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.paper-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.paper-link:hover {
+    color: #1d4ed8;
+}
+
 /* Education Section */
 .education-content {
     max-width: 800px;
@@ -906,12 +1097,12 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .education-item, .certification-item {
+    .education-item, .certification-item, .experience-item, .paper-item {
         flex-direction: column;
         text-align: center;
     }
 
-    .certification-issuer, .certification-date, .certification-skills, .certification-link {
+    .certification-issuer, .certification-date, .certification-skills, .certification-link, .experience-company, .experience-date, .experience-location, .experience-skills, .paper-meta, .paper-tags, .paper-link {
         justify-content: center;
     }
     
